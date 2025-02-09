@@ -1,6 +1,5 @@
 name: Run Apache Server
 
-# Trigger the workflow when a push is made to the 'main' branch or a pull request is created
 on:
   push:
     branches:
@@ -22,23 +21,26 @@ jobs:
         sudo apt-get update
         sudo apt-get install apache2 -y
 
-    # Step 3: Deploy your website files to the Apache directory
+    # Step 3: List files for debugging
     - name: List repository files
-      run: ls -la 
+      run: ls -la
+
+    # Step 4: Deploy website files to Apache directory
     - name: Deploy website
       run: |
-       sudo cp -r ./index.html /var/www/html/
-       sudo cp -r ./gif.html /var/www/html/
-       sudo cp -r ./new-gif /var/www/html/
-       sudo cp -r ./images /var/www/html/
-       
+        sudo cp -r ./index.html /var/www/html/
+        sudo cp -r ./gif.html /var/www/html/
+        sudo cp -r ./new-gif.gif /var/www/html/
+        sudo cp -r ./images /var/www/html/
 
-    # Step 4: Start Apache server and verify it's running
+    # Step 5: Start Apache server and verify it's running
     - name: Start Apache server
       run: |
         sudo systemctl start apache2
         sudo systemctl status apache2
 
-    # Step 5: Optional - Test the server
+    # Step 6: Optional - Test the server (use curl for verification)
     - name: Test Apache server
+      run: curl http://localhost
+
       run: curl http://localhost
