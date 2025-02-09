@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Private Account Fun</title>
+    <style>
+        body {
+            background-color: #e9e9e9;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .ad-container {
+            margin-bottom: 30px;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        @keyframes zoomIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .funny-msg {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ff4081;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            animation: bounceIn 1s ease-in-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: translateY(200px); opacity: 0; }
+            60% { transform: translateY(-30px); opacity: 1; }
+            80% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+        .insta-hashtags {
+            font-size: 1.4em;
+            color: #4caf50;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ad-container">
+        <h1>Instagram Private Account Fun!</h1>
+        <img src="new-gif.gif" alt="Private Account GIF" width="500">
+    </div>
+
+    <div class="funny-msg">
+        "When your account is private, but you're still getting follow requests like you're the next big thing!"
+    </div>
+
+    <div class="insta-hashtags">
+        #PrivateMode #InstaPrivacy #IGAddict #NoPeeking
+    </div>
+
+    <button class="button" onclick="alert('Keep your account private and stay awesome!')">Keep It Private</button>
+
+</body>
+</html>
